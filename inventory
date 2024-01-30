@@ -1,0 +1,15 @@
+[all]
+[all:children]
+app
+database
+webserver
+
+[app]
+10.0.0.6 ansible_user=sennin
+10.0.0.28 ansible_user=sennin
+
+[database]
+localhost ansible_connection=local postgresql_version=13 postgresql_data=/opt/postgresql/data
+
+[webserver]
+localhost ansible_connection=local
